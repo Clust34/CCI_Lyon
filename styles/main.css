@@ -222,6 +222,7 @@ em {
     .card,
     .separator {
         margin: auto;
+        margin-bottom: 1em;
     }
 }
 
@@ -301,6 +302,23 @@ em {
     box-shadow: var(--box-shadow-default);
 }
 
+@media only screen and (max-width:768px) {
+    .title-prof {
+        text-align: center;
+    } 
+    .profil-row {
+        display: block;
+        text-align: center;
+        margin-top: 2em
+    }   
+    .profil-description {
+        margin: auto;
+        width: auto;
+    }
+    .profil-img {
+        width: 75%;
+    }
+}
 /*************** CV PROFIL **********************/
 .cv-list {
     margin-top: 3em;
@@ -445,6 +463,24 @@ em {
     margin-top: 6em;
 }
 
+@media only screen and (max-width:768px) {
+    .about {
+        text-align: center;
+    }
+    .about-row {
+        display: block;
+    }
+    .about-desc {
+        margin: auto;
+        width: auto;
+    }
+    .about-img {
+        margin: auto;
+        padding-top: 1em;
+        width: 75%;
+    }
+} 
+
 /************** CONTACT ***************/
 
 section.contact {
@@ -511,14 +547,15 @@ section.contact {
 }
 
 .contact-form-content:hover .bg-contact-form-1 {
-    transform: translateX(720%);
+    transform: translateX(950%);
 }
 
 .contact-form-content:hover .bg-contact-form-2 {
-    transform: translateX(-720%);
+    transform: translateX(-950%);
 }
 
-.input-group {
+.input-group,
+.input-group-mess {
     margin-bottom: 1em;
     display: grid;
     grid-template-columns: 10% 80%;
@@ -547,4 +584,26 @@ footer {
 footer i {
     font-size: 18px;
     color: var(--secondary);
+}
+
+@media only screen and (max-width:768px) {
+    .contact-row {
+        display: block;
+        text-align: center;
+    }
+    .contact-info {
+        margin: auto;
+        width: auto;
+    }
+    .bg-contact-form-1,
+    .bg-contact-form-2 {
+        display: none;
+    }
+    .contact-form-content {
+        width: 100%;
+        padding:1em 0;
+    }
+    .input-group-mess {
+        display: flex;
+    }
 }
